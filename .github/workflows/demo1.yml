@@ -7,12 +7,14 @@ on:
       - main
       - 'dev-*' ## action will be trigger for dev-new, dev-test-new  branches but not developer-new
       - 'feat/**' ## feat-new, feat/new/button but not feature-new
+      - test
   workflow_dispatch:
   push:
     branches:
       - main
+      - test
       - 'dev-*' ## action will be trigger for dev-new, dev-test-new  branches but not developer-new
-      - 'feat/**' ## feat-new, feat/new/button but not feature-new
+      - 'feat/**' ## feat-new, feat/new/button but not feature-new # skip workflow
     paths-igmore:
       - '.github/workflows/*'
 jobs:
